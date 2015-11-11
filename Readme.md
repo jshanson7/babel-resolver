@@ -1,4 +1,4 @@
-# Babel Resolver [![NPM version][npm-image]][npm-url] [![Build status][travis-image]][travis-url]
+# Babel Resolver [![NPM version][npm-image]][npm-url] [![Build status][travis-image]][travis-url] [![Coverage status][coveralls-image]][coveralls-url]
 
 Resolve imported modules from any directory.
 
@@ -64,3 +64,5 @@ MIT
 [npm-url]: https://npmjs.org/package/babel-resolver
 [travis-image]: https://travis-ci.org/jshanson7/babel-resolver.svg
 [travis-url]: https://travis-ci.org/jshanson7/babel-resolver
+[coveralls-image]: https://coveralls.io/repos/jshanson7/babel-resolver/badge.svg?branch=master&service=github
+[coveralls-url]: https://coveralls.io/github/jshanson7/babel-resolver?branch=master
