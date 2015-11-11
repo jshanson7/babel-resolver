@@ -31,6 +31,7 @@ require('./app');
 
 ```
 **Note:** Run `rm -rf ~/.babel.json` before use to clear babel's cache.  If you're seeing errors, try this again.
+
 **Note2:** Babel's `resolveModuleSource` is currently only called when you use `import 'module'`, not when use `require('module')`
 
 Also, keep in mind that you must provide absolute directory paths to `babel-resolver`.
