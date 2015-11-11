@@ -1,4 +1,18 @@
 
+v0.0.7 / 2015-11-11
+===================
+
+  * more tests
+  * add comment
+
+v0.0.6 / 2015-11-11
+===================
+
+  * bump version
+  * more typos
+  * typos
+  * update changelog
+
 v0.0.4 / 2015-11-11
 ===================
 
@@ -15,9 +29,4 @@ v0.0.3 / 2015-11-11
   * update readme
   * add coverage
   * add history
-  * initial commit
-
-master / 2015-11-11
-===================
-
   * initial commit
