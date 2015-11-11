@@ -40,16 +40,11 @@ npm i babel-resolver --save
 rm -rf ~/.babel.json
 ```
 
-## Why not just set `NODE_PATH=app`?
+## Why not just set NODE_PATH?
 
-Setting `NODE_PATH` is a perfectly valid solution.  `babel-resolver` is for those who:
+Setting `NODE_PATH=app` is a perfectly valid solution.  `babel-resolver` is for those who:
 - find environment variables annoying
 - want to resolve modules from more than one directory
-
-```
-npm i babel-resolver --save
-rm -rf ~/.babel.json
-```
 
 ## License
 
