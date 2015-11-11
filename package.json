@@ -2,10 +2,13 @@
   "name": "babel-resolver",
   "version": "0.0.3",
   "description": "Resolve modules from any directory.",
-  "main": "index.js",
+  "main": "lib/createBabelResolver.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha test/**/*.test.js -t 10000",
-    "cover": "node node_modules/.bin/istanbul cover node_modules/.bin/_mocha --report lcovonly"
+    "test": "npm run lint && node_modules/.bin/mocha test/**/*.test.js -t 10000",
+    "lint": "./node_modules/.bin/eslint .",
+    "cover": "npm run istanbul && npm run coveralls",
+    "istanbul": "node node_modules/.bin/istanbul cover node_modules/.bin/_mocha --report lcovonly",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
@@ -29,8 +32,13 @@
   "homepage": "https://github.com/jshanson7/babel-resolver#readme",
   "devDependencies": {
     "babel-core": "^6.1.4",
+    "babel-eslint": "^4.1.5",
     "babel-preset-es2015": "^6.1.4",
     "coveralls": "^2.11.4",
+    "eslint": "^1.9.0",
+    "eslint-config-standard": "^4.4.0",
+    "eslint-plugin-babel": "^2.1.1",
+    "eslint-plugin-standard": "^1.3.1",
     "istanbul": "^0.4.0",
     "mocha": "^2.3.3"
   }
