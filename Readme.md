@@ -4,13 +4,11 @@ Resolve imported modules from any directory.
 
 ```javascript
 import User from '../../models/User';
-
 ```
 Becomes:
 
 ```javascript
 import User from 'models/User';
-
 ```
 
 ## Usage
@@ -28,7 +26,6 @@ require('babel-core/register')({
   resolveModuleSource: resolver
 });
 require('./app');
-
 ```
 **Note:** Run `rm -rf ~/.babel.json` before use to clear babel's cache.  If you're seeing errors, try this again.
 
@@ -41,7 +38,6 @@ Also, keep in mind that you must provide absolute directory paths to `babel-reso
 ```
 npm i babel-resolver --save
 rm -rf ~/.babel.json
-
 ```
 
 ## Why not just set `NODE_PATH=app`?
@@ -53,7 +49,6 @@ Setting `NODE_PATH` is a perfectly valid solution.  `babel-node` is for those wh
 ```
 npm i babel-resolver --save
 rm -rf ~/.babel.json
-
 ```
 
 ## License
