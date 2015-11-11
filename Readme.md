@@ -22,7 +22,7 @@ var anotherDirToCheck = resolve(__dirname, 'app/lib');
 var resolver = require('babel-resolver')(localModulesDir, anotherDirToCheck);
 
 require('babel-core/register')({
-  presets: ['es2015'],
+  presets: ['es2015'], // required for 'import'
   resolveModuleSource: resolver
 });
 require('./app');
