@@ -1,6 +1,6 @@
 # Babel Resolver [![NPM version][npm-image]][npm-url] [![Build status][travis-image]][travis-url] [![Coverage status][coveralls-image]][coveralls-url]
 
-Resolve imported modules from any directory.
+Resolve modules from any directory.
 
 ```javascript
 import User from '../../models/User';
@@ -42,7 +42,7 @@ rm -rf ~/.babel.json
 
 ## Why not just set `NODE_PATH=app`?
 
-Setting `NODE_PATH` is a perfectly valid solution.  `babel-node` is for those who:
+Setting `NODE_PATH` is a perfectly valid solution.  `babel-resolver` is for those who:
 - find environment variables annoying
 - want to resolve modules from more than one directory
 
