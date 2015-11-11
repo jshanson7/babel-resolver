@@ -4,7 +4,7 @@
   "description": "Resolve modules from any directory.",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha test/**/*.test.js",
+    "test": "node_modules/.bin/mocha test/**/*.test.js -t 10000",
     "cover": "node node_modules/.bin/istanbul cover node_modules/.bin/_mocha --report lcovonly"
   },
   "repository": {
