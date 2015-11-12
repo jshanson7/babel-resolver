@@ -35,7 +35,7 @@ This example uses [Babel 6](http://babeljs.io/) and [`babel-core/register`](http
 
 **Note:** Run `rm -rf ~/.babel.json` if you're seeing errors.
 
-**Note2:** Babel's `resolveModuleSource` is currently only called when you use `import 'module'`, not when use `require('module')`
+**Note2:** Babel's `resolveModuleSource` is only called when you use `import`, not `require`.
 
 Also, keep in mind that you must provide absolute directory paths to `babel-resolver`.
 
@@ -48,11 +48,10 @@ Also, keep in mind that you must provide absolute directory paths to `babel-reso
 var path = require('path');
 var localModulesDir = __dirname;
 var anotherDirToCheck = path.resolve(__dirname, 'lib');
-var resolver = require('babel-resolver')(localModulesDir, anotherDirToCheck);
 
 require('babel-core/register')({
   presets: ['es2015'],
-  resolveModuleSource: resolver
+  resolveModuleSource: require('babel-resolver')(localModulesDir, anotherDirToCheck)
 });
 require('./app');
 ```
@@ -76,7 +75,7 @@ rm -rf ~/.babel.json
 
 ## Why not just set NODE_PATH?
 
-Setting `NODE_PATH=app` is a perfectly valid solution.  `babel-resolver` is for those who:
+While setting `NODE_PATH=app` is a perfectly valid solution, `babel-resolver` is for those who:
 - find environment variables annoying
 - want to resolve modules from more than one directory
 
