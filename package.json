@@ -1,10 +1,10 @@
 {
   "name": "babel-resolver",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Resolve modules from any directory.",
   "main": "lib/createBabelResolver.js",
   "scripts": {
-    "test": "npm run lint && node_modules/.bin/mocha test/**/*.test.js -t 10000",
+    "test": "npm run lint && node_modules/.bin/mocha test/**/*.test.js",
     "lint": "./node_modules/.bin/eslint lib test",
     "cover": "npm run istanbul && npm run coveralls",
     "istanbul": "node node_modules/.bin/istanbul cover node_modules/.bin/_mocha --report lcovonly",
