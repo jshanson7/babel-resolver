@@ -1,6 +1,6 @@
-var resolve = require('path').resolve;
+var path = require('path');
 var localModulesDir = __dirname;
-var anotherDirToCheck = resolve(__dirname, 'lib');
+var anotherDirToCheck = path.resolve(__dirname, 'lib');
 var resolver = require('..')(localModulesDir, anotherDirToCheck);
 
 require('babel-core/register')({

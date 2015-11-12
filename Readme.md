@@ -16,9 +16,9 @@ import User from 'models/User';
 Using [Babel 6](http://babeljs.io/) & [`babel-core/register`](http://babeljs.io/docs/usage/require/):
 
 ```javascript
-var resolve = require('path').resolve;
-var localModulesDir = resolve(__dirname, 'app');
-var anotherDirToCheck = resolve(__dirname, 'app/lib');
+var path = require('path');
+var localModulesDir = path.resolve(__dirname, 'app');
+var anotherDirToCheck = path.resolve(__dirname, 'app/lib');
 var resolver = require('babel-resolver')(localModulesDir, anotherDirToCheck);
 
 require('babel-core/register')({
