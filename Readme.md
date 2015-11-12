@@ -15,23 +15,59 @@ import User from 'models/User';
 
 Using [Babel 6](http://babeljs.io/) & [`babel-core/register`](http://babeljs.io/docs/usage/require/):
 
+In app/index.js:
+
 ```javascript
-var path = require('path');
-var localModulesDir = path.resolve(__dirname, 'app');
-var anotherDirToCheck = path.resolve(__dirname, 'app/lib');
-var resolver = require('babel-resolver')(localModulesDir, anotherDirToCheck);
+var localModulesDir = __dirname;
+var resolver = require('babel-resolver')(localModulesDir);
 
 require('babel-core/register')({
   presets: ['es2015'], // required for 'import'
   resolveModuleSource: resolver
 });
-require('./app');
+
+require('./app.js');
 ```
+
+In app/app.js:
+
+```javascript
+import User from 'models/User';
+// => resolves: "app/models/User.js"
+```
+
 **Note:** Run `rm -rf ~/.babel.json` if you're seeing errors.
 
 **Note2:** Babel's `resolveModuleSource` is currently only called when you use `import 'module'`, not when use `require('module')`
 
 Also, keep in mind that you must provide absolute directory paths to `babel-resolver`.
+
+## Resolving Multiple Directories
+
+In app/index.js:
+
+```javascript
+var path = require('path');
+var localModulesDir = __dirname;
+var anotherDirToCheck = path.resolve(__dirname, 'lib');
+var resolver = require('babel-resolver')(localModulesDir, anotherDirToCheck);
+
+require('babel-core/register')({
+  presets: ['es2015'],
+  resolveModuleSource: resolver
+});
+require('./app');
+```
+
+In app/app.js:
+
+```javascript
+import User from 'models/User';
+// => resolves: "app/models/User.js"
+
+import somethingInLib from 'somethingInLib';
+// => resolves: "app/lib/somethingInLib.js"
+```
 
 ## Installation
 
