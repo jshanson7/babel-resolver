@@ -13,17 +13,14 @@ import User from 'models/User';
 
 ## Usage
 
-Using [Babel 6](http://babeljs.io/) & [`babel-core/register`](http://babeljs.io/docs/usage/require/):
+Example using [Babel 6](http://babeljs.io/) and [`babel-core/register`](http://babeljs.io/docs/usage/require/).
 
 In app/index.js:
 
 ```javascript
-var localModulesDir = __dirname;
-var resolver = require('babel-resolver')(localModulesDir);
-
 require('babel-core/register')({
   presets: ['es2015'], // required for 'import'
-  resolveModuleSource: resolver
+  resolveModuleSource: require('babel-resolver')(__dirname)
 });
 
 require('./app.js');
