@@ -1,4 +1,11 @@
-import assert from 'assert';
-import { User } from 'controllers';
+var resolve = require('path').resolve;
+var localModulesDir = __dirname;
+var anotherDirToCheck = resolve(__dirname, 'lib');
+var resolver = require('../../')(localModulesDir, anotherDirToCheck);
 
-assert(User === 'UserController');
+require('babel-core/register')({
+  presets: ['es2015'],
+  resolveModuleSource: resolver
+});
+
+require('./app');
