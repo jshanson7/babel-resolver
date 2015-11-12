@@ -42,7 +42,7 @@ Also, keep in mind that you must provide absolute directory paths to `babel-reso
 
 ## Resolving Multiple Directories
 
-In app/index.js:
+*In app/index.js:*
 
 ```javascript
 var path = require('path');
@@ -57,7 +57,7 @@ require('babel-core/register')({
 require('./app');
 ```
 
-In app/app.js:
+*In app/app.js:*
 
 ```javascript
 import User from 'models/User';
