@@ -1,4 +1,11 @@
 
+v0.0.8 / 2015-11-11
+===================
+
+  * bump version
+  * move test-app bootstrapper
+  * changes
+
 v0.0.7 / 2015-11-11
 ===================
 

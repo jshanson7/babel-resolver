@@ -12,34 +12,34 @@ function getFullPath(relativePath) {
 
 describe('autoExtensionedPathExists()', function () {
   it('existing dir', function () {
-    assert(pathExists(getFullPath('test-app/lib')));
+    assert(pathExists(getFullPath('../example-app/lib')));
   });
 
   it('non-existing dir', function () {
-    assert(!pathExists(getFullPath('test-app/foo')));
+    assert(!pathExists(getFullPath('../example-app/foo')));
   });
 
   it('existing file with no extension', function () {
-    assert(pathExists(getFullPath('test-app/lib/relativeImport')));
+    assert(pathExists(getFullPath('../example-app/lib/relativeImport')));
   });
 
   it('non-existing file with no extension', function () {
-    assert(!pathExists(getFullPath('test-app/lib/foo')));
+    assert(!pathExists(getFullPath('../example-app/lib/foo')));
   });
 
   it('existing file with .js extension', function () {
-    assert(pathExists(getFullPath('test-app/models/User.js')));
+    assert(pathExists(getFullPath('../example-app/models/User.js')));
   });
 
   it('non-existing file with .js extension', function () {
-    assert(!pathExists(getFullPath('test-app/models/foo.js')));
+    assert(!pathExists(getFullPath('../example-app/models/foo.js')));
   });
 
   it('existing file with .json', function () {
-    assert(pathExists(getFullPath('test-app/models/data.json')));
+    assert(pathExists(getFullPath('../example-app/models/data.json')));
   });
 
   it('non-existing file with .json extension', function () {
-    assert(!pathExists(getFullPath('test-app/models/foo.json')));
+    assert(!pathExists(getFullPath('../example-app/models/foo.json')));
   });
 });
