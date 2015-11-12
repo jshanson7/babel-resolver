@@ -13,9 +13,7 @@ import User from 'models/User';
 
 ## Usage
 
-Example using [Babel 6](http://babeljs.io/) and [`babel-core/register`](http://babeljs.io/docs/usage/require/).
-
-In app/index.js:
+*In app/index.js:*
 
 ```javascript
 require('babel-core/register')({
@@ -23,21 +21,24 @@ require('babel-core/register')({
   resolveModuleSource: require('babel-resolver')(__dirname)
 });
 
-require('./app.js');
+require('./app');
 ```
 
-In app/app.js:
+*In app/app.js:*
 
 ```javascript
 import User from 'models/User';
 // => resolves: "app/models/User.js"
 ```
 
+This example uses [Babel 6](http://babeljs.io/) and [`babel-core/register`](http://babeljs.io/docs/usage/require/).
+
 **Note:** Run `rm -rf ~/.babel.json` if you're seeing errors.
 
 **Note2:** Babel's `resolveModuleSource` is currently only called when you use `import 'module'`, not when use `require('module')`
 
 Also, keep in mind that you must provide absolute directory paths to `babel-resolver`.
+
 
 ## Resolving Multiple Directories
 
