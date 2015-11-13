@@ -1,5 +1,7 @@
 # Babel Resolver [![NPM version][npm-image]][npm-url] [![Build status][travis-image]][travis-url] [![Coverage status][coveralls-image]][coveralls-url]
 
+*To configure this using .babelrc, use the [Babel Resolver Plugin](https://github.com/jshanson7/babel-plugin-resolver)*
+
 Resolve modules from any directory.
 
 ```javascript
