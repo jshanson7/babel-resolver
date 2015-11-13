@@ -1,4 +1,13 @@
 
+v0.0.15 / 2015-11-13
+====================
+
+  * bump version
+  * add link to plugin version
+  * readme language
+  * italics
+  * v0.0.14
+
 v0.0.14 / 2015-11-11
 ====================
 
