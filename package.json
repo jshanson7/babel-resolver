@@ -1,6 +1,6 @@
 {
   "name": "babel-resolver",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Resolve modules from any directory.",
   "main": "lib/createBabelResolver.js",
   "scripts": {
