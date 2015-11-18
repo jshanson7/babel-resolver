@@ -1,6 +1,6 @@
 # Babel Resolver [![NPM version][npm-image]][npm-url] [![Build status][travis-image]][travis-url] [![Coverage status][coveralls-image]][coveralls-url]
 
-*To configure with `.babelrc`, get the [Babel Resolver Plugin](https://github.com/jshanson7/babel-plugin-resolver)*
+*To define in .babelrc, get the [Babel Resolver Plugin](https://github.com/jshanson7/babel-plugin-resolver) instead.*
 
 Resolve modules from any directory.
 
