@@ -24,7 +24,7 @@ require('babel-core/register')({
 require('./app');
 ```
 
-*To define in .babelrc, use the [Babel Resolver Plugin](https://github.com/jshanson7/babel-plugin-resolver) instead.*
+To define in .babelrc, use the [Babel Resolver Plugin](https://github.com/jshanson7/babel-plugin-resolver) instead.
 
 *In app/app.js:*
 
