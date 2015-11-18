@@ -1,7 +1,5 @@
 # Babel Resolver [![NPM version][npm-image]][npm-url] [![Build status][travis-image]][travis-url] [![Coverage status][coveralls-image]][coveralls-url]
 
-*To define in .babelrc, get the [Babel Resolver Plugin](https://github.com/jshanson7/babel-plugin-resolver) instead.*
-
 Resolve modules from any directory.
 
 ```javascript
@@ -25,6 +23,8 @@ require('babel-core/register')({
 
 require('./app');
 ```
+
+*To define in .babelrc, use the [Babel Resolver Plugin](https://github.com/jshanson7/babel-plugin-resolver) instead.*
 
 *In app/app.js:*
 
