@@ -24,8 +24,6 @@ require('babel-core/register')({
 require('./app');
 ```
 
-To define in .babelrc, use the [Babel Resolver Plugin](https://github.com/jshanson7/babel-plugin-resolver) instead.
-
 *In app/app.js:*
 
 ```javascript
@@ -34,6 +32,8 @@ import User from 'models/User';
 ```
 
 This example uses [Babel 6](http://babeljs.io/) and [`babel-core/register`](http://babeljs.io/docs/usage/require/).
+
+If you wish to define options in .babelrc, use the [Babel Resolver Plugin](https://github.com/jshanson7/babel-plugin-resolver) instead.
 
 **Note:** Run `rm -rf ~/.babel.json` if you're seeing errors.
 
