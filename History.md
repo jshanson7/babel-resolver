@@ -1,4 +1,17 @@
 
+v0.0.16 / 2015-11-21
+====================
+
+  * bump version
+  * support '.jsx' file extensions, resolves #1
+  * more rearranging
+  * deitalicize
+  * rearrange
+  * more wordiness
+  * wordiness
+  * spacing
+  * changelog v0.0.15
+
 v0.0.15 / 2015-11-13
 ====================
 
