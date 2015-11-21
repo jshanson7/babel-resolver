@@ -9,7 +9,7 @@ function resolveSource(source) {
   return resolveModuleSource(
     source,
     [nodeModulesDir, exampleAppDir, exampleAppLibDir],
-    ['.js', '.json']
+    ['.js', '.json', '.jsx']
   );
 }
 

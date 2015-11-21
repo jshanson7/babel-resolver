@@ -3,7 +3,7 @@ var resolve = require('path').resolve;
 var autoExtensionedPathExists = require('../lib/autoExtensionedPathExists');
 
 function pathExists(path) {
-  return autoExtensionedPathExists(path, ['.js', '.json']);
+  return autoExtensionedPathExists(path, ['.js', '.json', '.jsx']);
 }
 
 function getFullPath(relativePath) {
@@ -41,5 +41,13 @@ describe('autoExtensionedPathExists()', function () {
 
   it('non-existing file with .json extension', function () {
     assert(!pathExists(getFullPath('../example-app/models/foo.json')));
+  });
+
+  it('existing file with .jsx', function () {
+    assert(pathExists(getFullPath('../example-app/views/UserList.jsx')));
+  });
+
+  it('non-existing file with .jsx extension', function () {
+    assert(!pathExists(getFullPath('../example-app/views/foo.jsx')));
   });
 });
