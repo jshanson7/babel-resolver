@@ -4,11 +4,11 @@
   "description": "Resolve modules from any directory.",
   "main": "lib/createBabelResolver.js",
   "scripts": {
-    "test": "npm run lint && node_modules/.bin/mocha test/**/*.test.js",
-    "lint": "./node_modules/.bin/eslint lib test",
+    "test": "npm run lint && mocha test/**/*.test.js",
+    "lint": "eslint lib test",
     "cover": "npm run istanbul && npm run coveralls",
-    "istanbul": "node node_modules/.bin/istanbul cover node_modules/.bin/_mocha --report lcovonly",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "istanbul": "node istanbul cover _mocha --report lcovonly",
+    "coveralls": "cat ./coverage/lcov.info | coveralls.js"
   },
   "repository": {
     "type": "git",
