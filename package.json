@@ -7,8 +7,8 @@
     "test": "npm run lint && mocha test/**/*.test.js",
     "lint": "eslint lib test",
     "cover": "npm run istanbul && npm run coveralls",
-    "istanbul": "node istanbul cover _mocha --report lcovonly",
-    "coveralls": "cat ./coverage/lcov.info | coveralls.js"
+    "istanbul": "istanbul cover _mocha --report lcovonly",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
