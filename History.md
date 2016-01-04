@@ -1,4 +1,15 @@
 
+v0.0.17 / 2016-01-03
+==================
+
+  * v0.0.17
+  * Merge pull request #3 from dotfold/fix/windows-path-separator
+  * make istanbul script cross platform friendly
+  * fix script paths to run on windows
+  * use path.sep instead of hardcoded forward slash
+  * tweak copy
+  * v0.0.16
+
 v0.0.16 / 2015-11-21
 ====================
 
