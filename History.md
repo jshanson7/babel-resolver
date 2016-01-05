@@ -1,7 +1,10 @@
 
-v0.0.17 / 2016-01-03
-==================
+v0.0.18 / 2016-01-05
+====================
 
+  * v0.0.18
+  * search all node_modules paths
+  * changelog
   * v0.0.17
   * Merge pull request #3 from dotfold/fix/windows-path-separator
   * make istanbul script cross platform friendly
