@@ -16,7 +16,7 @@ import User from 'models/User';
 *In app/index.js:*
 
 ```javascript
-require('babel-core/register')({
+require('babel-register')({
   presets: ['es2015'], // required for 'import'
   resolveModuleSource: require('babel-resolver')(__dirname)
 });
@@ -31,7 +31,7 @@ import User from 'models/User';
 // => resolves: "app/models/User.js"
 ```
 
-This example uses [Babel 6](http://babeljs.io/) and [`babel-core/register`](http://babeljs.io/docs/usage/require/).
+This example uses [Babel 6](http://babeljs.io/) and [`babel-register`](http://babeljs.io/docs/usage/require/).
 
 If you wish to define options in .babelrc, use the [Babel Resolver Plugin](https://github.com/jshanson7/babel-plugin-resolver) instead.
 
@@ -51,7 +51,7 @@ var path = require('path');
 var localModulesDir = __dirname;
 var anotherDirToCheck = path.resolve(__dirname, 'lib');
 
-require('babel-core/register')({
+require('babel-register')({
   presets: ['es2015'],
   resolveModuleSource: require('babel-resolver')(localModulesDir, anotherDirToCheck)
 });
