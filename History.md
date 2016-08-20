@@ -1,4 +1,11 @@
 
+v1.0.0 / 2016-08-20
+===================
+
+  * use babel-register instead of babel-core/register
+  * Merge pull request #5 from brandonbloom/patch-1
+  * Resolve Unix-style path separators on Windows.
+
 v0.0.18 / 2016-01-05
 ====================
 
