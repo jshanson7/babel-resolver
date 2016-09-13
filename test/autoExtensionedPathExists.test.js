@@ -50,4 +50,12 @@ describe('autoExtensionedPathExists()', function () {
   it('non-existing file with .jsx extension', function () {
     assert(!pathExists(getFullPath('../example-app/views/foo.jsx')));
   });
+
+  it('existing file with .react.js extension (multiple file extensions)', function () {
+    assert(pathExists(getFullPath('../example-app/views/MultipleFileExtensions.react.js')));
+  });
+
+  it('non-existing file with .react.js extension (multiple file extensions)', function () {
+    assert(!pathExists(getFullPath('../example-app/views/foo.react.js')));
+  });
 });
